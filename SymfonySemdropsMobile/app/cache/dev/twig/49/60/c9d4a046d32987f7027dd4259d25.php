@@ -46,12 +46,12 @@ class __TwigTemplate_4960c9d4a046d32987f7027dd4259d25 extends Twig_Template
 \t<ul>
 \t\t<li class= \"arrow\"><a href= \"";
         // line 7
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("getCategories"), "html");
-        echo "\">Get Categories</a></li>
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("addCategory"), "html");
+        echo "\">Add Categories</a></li>\t
 \t\t<li class= \"arrow\"><a href= \"";
         // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("addCategory"), "html");
-        echo "\">Add Categories</a></li>
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("getCategories"), "html");
+        echo "\">Get Categories</a></li>
 \t\t<li class= \"arrow\"><a href= \"";
         // line 9
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("addPropertyTag"), "html");

@@ -14,12 +14,7 @@
 			//$CONFIGVAR= new ConfigVar();
 		}
 		
-		/*public function setCategory($aCategory) {
-			$datos='<'.$this->getUri().'> <rdf:Type> <http://semdrops.lifia.edu.ar/ns/category#'.$aCategory.'>.';//Se arman los datos para guardarlos en la base de datos
-			return $estado= writeInSesameDataBase($datos);			
-		}*/
-
-		private function saveACategory($aCategory) {
+    	private function saveACategory($aCategory) {
 			//saves a category in the array
 			$this->categories[]= $aCategory;
 		}

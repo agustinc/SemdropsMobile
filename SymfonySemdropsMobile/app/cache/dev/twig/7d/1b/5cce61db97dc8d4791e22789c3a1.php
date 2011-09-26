@@ -103,7 +103,7 @@ class __TwigTemplate_7d1b5cce61db97dc8d4791e22789c3a1 extends Twig_Template
 \t<input type= \"button\" onclick= \"location.href='";
         // line 26
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("addPropertyTag"), "html");
-        echo "'\" value=\"Add a PropertyTag\" name=\"addCategoryButton\" class= \"resetButtonStyle white button\"/>
+        echo "'\" value=\"Add a PropertyTag\" name=\"addCategoryButton\" class= \"resetButtonStyle white button\"/><br>
 \t<input type= \"button\" onclick= \"location.href='";
         // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("homepage"), "html");

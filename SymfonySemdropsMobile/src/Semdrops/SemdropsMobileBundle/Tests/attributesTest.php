@@ -8,30 +8,22 @@ Class propertiesTest extends TestCase
 {
    protected $attribute;
    
-   
   public function setUp()
    {
     $this -> attribute = new AttributeTags();
     }
-  public function testAddAttributes()
+   public function testAddProperties()
    {
-	$this-> attribute-> setUri('http://www.webTest.com.ar/');
-	$this-> attribute-> setAttributeTag('TestAttribute');
-	$this-> attribute-> setTarget('2011');
-	$this -> assertTrue($this->attribute->writeAttributeTag());//escribe un attribute en la BD
-	$a= $this-> attribute-> getAttributes();//guarda en la variable un arreglo con las attributes
-    $this-> assertContains('TestAttribute', $a[0]);
-    $this-> assertNotContains('TestFailure', $a[0]);
+	$url='http://requiem:8080/openrdf-sesame/repositories/lalala/statements';
+	$datos='<http://www.ole.com.ar/> <http://semdrops.lifia.edu.ar/ns/attribute#DiarioOle> "DiarioDeportivo".';   
+	$this -> assertTrue($this->semdrops->writeInSesameDataBase($datos));
 	}
-    public function testGetAttributes()
+    public function testGetProperties()
  { 
-	$this-> attribute-> setUri('http://www.TestSemdrops.com.ar/');
-	$this-> attribute-> setAttributeTag('TestAttribute');
-	$this-> attribute-> setTarget('2011');
-	$Ok= $this->attribute->writeAttributeTag();//escribe un attribute en la BD
-   	$a= $this-> attribute-> getAttributes();//guarda en la variable un arreglo con las attributes
-    $this-> assertContains('TestAttribute', $a[0]);
-    $this-> assertNotContains('TestFailure', $a[0]);
+    $url='http://requiem.local:8080/openrdf-workbench/repositories/lalala/query?';
+	$this-> attribute-> setUri('http://www.ole.com.ar/');
+	$a= $this-> attribute-> getAttributes();
+    $this-> assertEquals('DiarioOLe', $a[0]);
   }
  }
 ?>
